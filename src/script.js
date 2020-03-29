@@ -21,7 +21,7 @@ recognition.onresult = function(event) {
     document.getElementById('textbox').value = Content;
     var inputVal = document.getElementById('textbox').value;
     weatherBalloon(inputVal);
-  
+    
     Content = '';
 
     
@@ -89,8 +89,9 @@ function drawWeather(d) {
     document.getElementById("description").innerHTML = d.weather[0].description;
     document.getElementById("temp").innerHTML = fahrenheit + "&deg;";
     document.getElementById("location").innerHTML = d.name;
-
-    var to_speak = new SpeechSynthesisUtterance(fahrenheit);
-window.speechSynthesis.speak(to_speak);
+    var condition = document.getElementById("description").innerHTML
+    var to_speak = new SpeechSynthesisUtterance(fahrenheit + "degrees farenheit and " + condition);
+    
+    window.speechSynthesis.speak(to_speak);
 }
 

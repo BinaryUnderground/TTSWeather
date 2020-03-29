@@ -1,42 +1,35 @@
 ﻿<!DOCTYPE html>
  
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>Speech to text conversion using JavaScript</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <script src="https://code.responsivevoice.org/responsivevoice.js?key=YOUR_UNIQUE_KEY"></script>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <title>Speech to text conversion using JavaScript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    </head>
  
     <body>
-        <h1>TTS Weather</h1>
         <div class="container">
             <div id="weather">
-                <div id="location"></div>
                 <div id="description"></div>
                 <h1 id="temp"></h1>
-
+                <div id="location"></div>
             </div>
 
             <div class="mywebapp">
                 <div class="input">
-                    <textarea id="textbox" rows="6"></textarea>
+                    <textarea id="textbox" rows="1" style="resize: none; visibility: hidden;"></textarea>
                 </div>
                 <button id="start-btn" title="Start">Press and Hold</button>
                 <p id="instructions">
-                    Press and hold start button, then say a zipcode into the microphone to find
-                    out the weather!
-
-                    
+                    Press and hold start button, then say a location to get the temperature and conditions!
                 </p>
                 
             </div>
