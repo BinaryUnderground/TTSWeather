@@ -7,7 +7,9 @@
     "start": "src/index.html",
     "starttestlocal": "src/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^2.3.0"
+  },
   "devDependencies": {
     "nodemon": "1.18.4"
   },
