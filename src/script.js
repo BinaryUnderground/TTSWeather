@@ -20,6 +20,7 @@ recognition.onresult = function(event) {
     var inputVal = document.getElementById('textbox').value;
     weatherBalloon(inputVal);
   
+    Content = '';
 };
  
 recognition.onstart = function() { 
