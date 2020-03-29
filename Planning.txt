@@ -1,3 +1,3 @@
 Weather api - https://openweathermap.org/api
-Text-to-speach/speech to text api- google api's
+Text-to-speach/speech to text api- 
 firebase for hosting webapp
