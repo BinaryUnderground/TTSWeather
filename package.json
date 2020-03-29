@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.html",
   "scripts": {
-    "start": "src/index.html"
+    "start": "src/index.html",
+    "starttestlocal": "src/index.js"
   },
   "dependencies": {},
   "devDependencies": {
