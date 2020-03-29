@@ -16,16 +16,21 @@ recognition.onresult = function(event) {
   var transcript = event.results[current][0].transcript;
  
     Content += transcript;
-    document.getElementById('textbox').value= Content;
+    document.getElementById('textbox').value = Content;
+    var inputVal = document.getElementById('textbox').value;
+    weatherBalloon(inputVal);
   
 };
  
 recognition.onstart = function() { 
     console.log("started")
+    document.getElementById('textbox').value = '';
+
 }
  
 recognition.onspeechend = function() {
-  console.log("ended")
+    console.log("ended")
+    
 }
  
 recognition.onerror = function(event) {
@@ -49,18 +54,12 @@ document.getElementById('start-btn').addEventListener("mouseup", function(e) {
       recognition.stop();
 });
 
-Textbox.on("input", function () {
-    Content = document.getElementsByClassName(this).val();
-});
+
 
 function weatherBalloon(cityName) {
     var key = "4583df71a6be113c353d48cc4d720e36";
     fetch(
-        "https://api.openweathermap.org/data/2.5/weather?q=" +
-        cityName +
-        "&appid=" +
-        key
-    )
+        "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + key)
         .then(function (resp) {
             return resp.json();
         }) // Convert data to json
