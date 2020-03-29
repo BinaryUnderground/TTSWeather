@@ -92,6 +92,6 @@ function drawWeather(d) {
     var condition = document.getElementById("description").innerHTML
     var to_speak = new SpeechSynthesisUtterance(fahrenheit + "degrees farenheit and " + condition);
     
-window.speechSynthesis.speak(to_speak);
+    window.speechSynthesis.speak(to_speak);
 }
 
