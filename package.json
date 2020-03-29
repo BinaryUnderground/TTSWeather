@@ -2,9 +2,9 @@
   "name": "ttsweather",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "src/index.html",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "src/index.html"
   },
   "dependencies": {},
   "devDependencies": {
