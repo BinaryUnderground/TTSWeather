@@ -90,6 +90,9 @@ function drawWeather(d) {
     document.getElementById("location").innerHTML = d.name;
     var condition = document.getElementById("description").innerHTML
     var to_speak = new SpeechSynthesisUtterance(fahrenheit + "degrees farenheit and " + condition);
+    var iconcode = d.weather[0].icon;
+    var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
+    document.getElementById("wicon").src = iconurl;
     
     window.speechSynthesis.speak(to_speak);
 }

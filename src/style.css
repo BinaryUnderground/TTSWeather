@@ -12,7 +12,6 @@ body {
 
 .container {
     text-align: center;
-    margin: 300px 400px 300px 400px;
     
     border-radius: 5px;
     color: #0000e6;
@@ -25,7 +24,7 @@ p {
 }
 
 #start-btn {
-    background-color: #4dc3ff; /* Green */
+  background-color: #4dc3ff; /* Green */
   border: none;
   color: white;
   padding: 10px 12px;
