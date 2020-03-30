@@ -89,8 +89,20 @@ function drawWeather(d) {
     document.getElementById("description").innerHTML = d.weather[0].description;
     document.getElementById("temp").innerHTML = fahrenheit + "&deg;";
     document.getElementById("location").innerHTML = d.name;
-    var condition = document.getElementById("description").innerHTML
-    var to_speak = new SpeechSynthesisUtterance(fahrenheit + "degrees farenheit and " + condition);
+    var condition = document.getElementById("description").innerHTML;
+    var id = d.weather[0].id;
+    if (id >= 200 && id <= 232) {
+        var moreDetails = "Thunderstorm Alert!!! You might wanna stay home today.";
+    } else if (id >= 300 && id <= 531) {
+        var moreDetails = "Do not forget your umbrella.";
+    } else if (id >= 600 && id <= 622) {
+        var moreDetails = "Stay safe out there. Consider a jacket.";
+    } else if (id === 781) {
+        var moreDetails = "Stay home";
+    } else if (id === 800) {
+        var moreDetails = "Have a great day.";
+    }
+    var to_speak = new SpeechSynthesisUtterance(fahrenheit + "degrees farenheit and " + condition + moreDetails);
     var iconcode = d.weather[0].icon;
     var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
     document.getElementById("wicon").src = iconurl;
