@@ -5,8 +5,8 @@ This is a text to speech weather application built using HTML, CSS, & Javascript
 
 
 ## <i>Speech examples</i>
-### Good examples:
-### Bad examples:
+#### Good examples:
+#### Bad examples:
 
 ## <i>Built with</i>
 
