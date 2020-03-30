@@ -1,4 +1,4 @@
-<h1>TTSWeather - Voice Based Weather App</h1>
+<h1>TTSWeather - Voice Based Weather</h1>
 
 ## <i>About</i>
 
