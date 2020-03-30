@@ -52,6 +52,7 @@ recognition.onerror = function(event) {
  
 
 //var startbtn = document.getElementById('start-btn');
+//DESKTOP FUNCTIONALITY
 document.getElementById('start-btn').addEventListener("mousedown", function(e) {
     if (Content.length) {
         Content += ' ';
@@ -65,6 +66,19 @@ document.getElementById('start-btn').addEventListener("mouseup", function(e) {
       recognition.stop();
 });
 
+//MOBILE FUNCTIONALITY
+document.getElementById('start-btn').addEventListener("touchstart", function(e) {
+    if (Content.length) {
+        Content += ' ';
+      }
+      recognition.start();
+});
+document.getElementById('start-btn').addEventListener("touchend", function(e) {
+    if (Content.length) {
+        Content += ' ';
+      }
+      recognition.stop();
+});
 
 
 function weatherBalloon(cityName) {
