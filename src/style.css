@@ -37,6 +37,8 @@ p {
   display: inline-block;
   font-size: 16px;
   font-family: 'IBM Plex Mono', monospace;
+  width: 90%;
+  height: 180px;
 }
 #start-btn:active {
     color: #0000e6;
