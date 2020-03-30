@@ -7,8 +7,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #80e5ff;
+    /* background-image: url(src/null.img); */
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     flex-direction: column-reverse;
 }
 
