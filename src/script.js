@@ -77,7 +77,7 @@ function weatherBalloon(cityName) {
             // catch any errors
         });
 } 
-
+/*
 //get the users latitude and longitude location
 if ("geolocation" in navigator) {
   // Do something with coordinates returned
@@ -89,6 +89,9 @@ if ("geolocation" in navigator) {
       latitude = Math.round(latitude * 100)/ 100;
       longitude = Math.round(longitude * 100)/ 100;
       // Set h2 text as coordinates
+
+      
+      
       el_h2.innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
 
       // Append h2 to document
@@ -98,7 +101,7 @@ if ("geolocation" in navigator) {
   // Fetch Coordinates
   navigator.geolocation.getCurrentPosition(processCoords);
 }
-
+*/
 window.onload = function () {
     weatherBalloon("New York");
 };
