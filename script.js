@@ -86,10 +86,12 @@ if (isMobile) {
 
 
 
-
+// this is the function where the api would be called
 function weatherBalloon(cityName) {
+    //private api key
     var key = "4583df71a6be113c353d48cc4d720e36";
     fetch(
+        //passing the key and city name to url 
         "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + key)
         .then(function (resp) {
             return resp.json();
@@ -99,23 +101,29 @@ function weatherBalloon(cityName) {
         })
         .catch(function () {
             // catch any errors
+            var err_message = new SpeechSynthesisUtterance("Invalid city name, please try again.");
+            window.speechSynthesis.speak(err_message);
+            console.log("invalid city");
         });
 } 
-
-
+//default screen show the weather of New York
 window.onload = function () {
     weatherBalloon("New York");
 };
 
+//extract the data from the json response file
 function drawWeather(d) {
-    var celcius = Math.round(parseFloat(d.main.temp) - 273.15);
     var fahrenheit = Math.round((parseFloat(d.main.temp) - 273.15) * 1.8 + 32);
+
+    //DOM manipulation to add the data to the html
     document.getElementById("description").innerHTML = d.weather[0].description;
     document.getElementById("temp").innerHTML = fahrenheit + "&deg;";
     document.getElementById("location").innerHTML = d.name;
     var city = d.name;
     var condition = document.getElementById("description").innerHTML;
     var id = d.weather[0].id;
+
+    //customized message according to the weather
     if (id >= 200 && id <= 232) {
         var moreDetails = "Thunderstorm Alert!!! You might wanna stay home today.";
     } else if (id >= 300 && id <= 531) {
@@ -127,11 +135,14 @@ function drawWeather(d) {
     } else if (id === 800) {
         var moreDetails = "Have a great day.";
     } else var moreDetails = "";
-    var to_speak = new SpeechSynthesisUtterance("Today in "+ city +  "it is "+ fahrenheit + "degrees farenheit and " + condition + "." + moreDetails);
+
+    //text-to-speech the output
+    var to_speak = new SpeechSynthesisUtterance("Today in " + city + "it is " + fahrenheit + "degrees farenheit and " + condition + ". " + moreDetails);
+    window.speechSynthesis.speak(to_speak);
+
+    //getting the icons
     var iconcode = d.weather[0].icon;
     var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
     document.getElementById("wicon").src = iconurl;
-    
-    window.speechSynthesis.speak(to_speak);
 }
 
