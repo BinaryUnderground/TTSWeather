@@ -1,5 +1,0 @@
-Weather api - https://openweathermap.org/api
-Text-to-speach api-
-speech to text api- 
-https://blog.eduonix.com/artificial-intelligence/speech-text-conversion-using-javascript/
-firebase for hosting webapp

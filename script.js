@@ -1,6 +1,10 @@
 var SpeechRecognition = window.webkitSpeechRecognition;
   
 
+var firstMsg = new SpeechSynthesisUtterance("Hello, this is a web application that informs visually impaired users of weather information, press and hold the button in the middle of the screen and state a city or state or country then let go of the button");
+window.speechSynthesis.speak(firstMsg);
+
+
 
 var recognition = new SpeechRecognition();
  
@@ -83,8 +87,6 @@ window.onload = function () {
     weatherBalloon("New York");
 };
 
-
-
 function drawWeather(d) {
     var celcius = Math.round(parseFloat(d.main.temp) - 273.15);
     var fahrenheit = Math.round((parseFloat(d.main.temp) - 273.15) * 1.8 + 32);
@@ -93,7 +95,6 @@ function drawWeather(d) {
     document.getElementById("location").innerHTML = d.name;
     var condition = document.getElementById("description").innerHTML;
     var id = d.weather[0].id;
-    var city = d.name;
     if (id >= 200 && id <= 232) {
         var moreDetails = "Thunderstorm Alert!!! You might wanna stay home today.";
     } else if (id >= 300 && id <= 531) {
@@ -104,8 +105,8 @@ function drawWeather(d) {
         var moreDetails = "Stay home";
     } else if (id === 800) {
         var moreDetails = "Have a great day.";
-    }
-    var to_speak = new SpeechSynthesisUtterance("Today in" + city + "it is" + fahrenheit + "degrees farenheit and " + condition + ". " + moreDetails);
+    } else var moreDetails = "";
+    var to_speak = new SpeechSynthesisUtterance(fahrenheit + "degrees farenheit and " + condition + moreDetails);
     var iconcode = d.weather[0].icon;
     var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
     document.getElementById("wicon").src = iconurl;
