@@ -1,5 +1,5 @@
 <h1>TTSWeather - Voice Based Weather</h1>
-![picture](https://github.com/BinaryUnderground/TTSWeather/blob/master/readmscreen.png)
+![alt text](https://github.com/BinaryUnderground/TTSWeather/blob/master/readmscreen.png)
 ## <i>About</i>
 This is a text to speech weather application built using HTML, CSS, & Javascript. Our team utilized the OpenWeathermap api to retrieve live weather data, Mozilla Web Speech API in order to transcribe text-to-speech/speech-to-text. 
 
