@@ -6,7 +6,6 @@ window.speechSynthesis.speak(firstMsg);
 
 
 
-
 var recognition = new SpeechRecognition();
  
 var Textbox = document.getElementById('textbox');
