@@ -90,10 +90,6 @@ if (isMobile) {
 }
 
 
-
-
-
-
 function weatherBalloon(cityName) {
     var key = "4583df71a6be113c353d48cc4d720e36";
     fetch(
