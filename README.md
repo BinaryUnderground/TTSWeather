@@ -4,6 +4,9 @@
 This is a text to speech weather application built using HTML, CSS, & Javascript. Our team utilized the OpenWeathermap api to retrieve live weather data, Mozilla Web Speech API in order to transcribe text-to-speech/speech-to-text. 
 
 
+## <i>Speech examples</i>
+
+
 ## <i>Built with</i>
 
 Javascript, HTML, CSS
@@ -21,5 +24,3 @@ Tristan Wallace, Oljas Alishev, Mohammad Faiaz
 ## <i>License</i>
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/BinaryUnderground/TTSWeather/blob/master/LICENSE) file for details
-
-
