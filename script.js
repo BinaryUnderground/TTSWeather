@@ -74,9 +74,7 @@ document.getElementById('start-btn').addEventListener("touchstart", function(e) 
       recognition.start();
 });
 document.getElementById('start-btn').addEventListener("touchend", function(e) {
-    if (Content.length) {
-        Content += ' ';
-      }
+    
       recognition.stop();
 });
 
