@@ -3,6 +3,7 @@
 ## <i>About</i>
 
 
+
 ## <i>Built with</i>
 
 Javascript, HTML, CSS
@@ -21,5 +22,5 @@ Tristan Wallace, Oljas Alishev, Mohammad Faiaz
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/BinaryUnderground/TTSWeather/blob/master/LICENSE) file for details
 
-## <i>Acknowledgements</i>
+//## <i>Acknowledgements</i>
 
