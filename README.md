@@ -17,9 +17,9 @@ Mozilla Web Speech API -
 
 Tristan Wallace, Oljas Alishev, Mohammad Faiaz
 
-## License
+## <i>License</i>
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://gist.github.com/BinaryUnderground/LICENSE.md) file for details
 
-## Acknowledgements
+## <i>Acknowledgements</i>
 
