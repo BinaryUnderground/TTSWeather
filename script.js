@@ -1,20 +1,22 @@
+
+
 var SpeechRecognition = window.webkitSpeechRecognition;
   
-
+//instruction message for visually impaired users on how to use program
 var firstMsg = new SpeechSynthesisUtterance("Hello, this is a web application that informs visually impaired users of weather information, press and hold the button in the middle of the screen and state a city or state or country then let go of the button");
 window.speechSynthesis.speak(firstMsg);
 
 
-
+// instantiated speech recognition interface
 var recognition = new SpeechRecognition();
- 
+ // var textbox will hold text for display
 var Textbox = document.getElementById('textbox');
 const instructions = document.getElementById('instructions');
 
 var Content = '';
 
 recognition.continuous = true;
- 
+//holds all values of speech that's been converted to text 
 recognition.onresult = function(event) {
  
   var current = event.resultIndex;
@@ -30,20 +32,24 @@ recognition.onresult = function(event) {
 
     
 };
- 
+//onstart logs to console that it has started 
 recognition.onstart = function() { 
     console.log("started")
     document.getElementById('textbox').value = '';
 
 }
+//onchange logs to console that textbox has beenchanged
+//redundant because textbox is hidden, although might be useful 
+//in later iterations of program
 Textbox.onchange = function() {
-  
+  console.log("changed")
 }
+//onend logs to console that it has ended
 recognition.onspeechend = function() {
     console.log("ended")
     
 }
- 
+ //onerror logs to console that no speech is being inputted
 recognition.onerror = function(event) {
   if(event.error == 'no-speech') {
     instructions.text('Try again.');  
@@ -51,7 +57,7 @@ recognition.onerror = function(event) {
 }
  
 
-//var startbtn = document.getElementById('start-btn');
+
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -68,6 +74,7 @@ if (isMobile) {
         recognition.stop();
     });
 } else {
+    //DESKTOP FUNCTIONALITY
     document.getElementById('start-btn').addEventListener("mousedown", function (e) {
         if (Content.length) {
             Content += ' ';
@@ -81,10 +88,6 @@ if (isMobile) {
         recognition.stop();
     });
 }
-//DESKTOP FUNCTIONALITY
-
-
-
 
 // this is the function where the api would be called
 function weatherBalloon(cityName) {
