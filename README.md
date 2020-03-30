@@ -19,7 +19,7 @@ Tristan Wallace, Oljas Alishev, Mohammad Faiaz
 
 ## <i>License</i>
 
-This project is licensed under the MIT License - see the [LICENSE](https://www.github.com/BinaryUnderground/TTSWeather/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/BinaryUnderground/TTSWeather/blob/master/LICENSE) file for details
 
 ## <i>Acknowledgements</i>
 
