@@ -13,7 +13,7 @@ This is a text to speech weather application built using HTML, CSS, & Javascript
 
 Javascript, HTML, CSS
 
-## <i>Apis Integrated</i>
+### <i>Apis Integrated</i>
 OpenWeather API- [https://openweathermap.org/api](https://openweathermap.org/api)
 
 Mozilla Web Speech API -
