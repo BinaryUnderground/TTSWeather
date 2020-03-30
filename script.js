@@ -107,6 +107,7 @@ function drawWeather(d) {
     document.getElementById("description").innerHTML = d.weather[0].description;
     document.getElementById("temp").innerHTML = fahrenheit + "&deg;";
     document.getElementById("location").innerHTML = d.name;
+    var city = d.name;
     var condition = document.getElementById("description").innerHTML;
     var id = d.weather[0].id;
     if (id >= 200 && id <= 232) {
@@ -120,7 +121,7 @@ function drawWeather(d) {
     } else if (id === 800) {
         var moreDetails = "Have a great day.";
     } else var moreDetails = "";
-    var to_speak = new SpeechSynthesisUtterance(fahrenheit + "degrees farenheit and " + condition + moreDetails);
+    var to_speak = new SpeechSynthesisUtterance("Today in "+ city +  "it is "+ fahrenheit + "degrees farenheit and " + condition + "." + moreDetails);
     var iconcode = d.weather[0].icon;
     var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
     document.getElementById("wicon").src = iconurl;
