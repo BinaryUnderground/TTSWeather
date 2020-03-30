@@ -6,7 +6,7 @@ This is a text to speech weather application built using HTML, CSS, & Javascript
 
 ## <i>Speech examples</i>
 #### Good examples:
-#### Bad examples:
+#### Bad examples: Boise Idaho, Denver Colorado
 
 ## <i>Built with</i>
 
