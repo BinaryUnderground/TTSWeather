@@ -1,4 +1,4 @@
-<h1> TTSWeather</h1>
+<h1><b> TTSWeather </b></h1>
 
 ## <i>About</i>
 
