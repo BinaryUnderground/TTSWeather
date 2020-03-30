@@ -28,8 +28,8 @@ p {
 }
 
 #start-btn {
-  background-color: #4dc3ff; /* Green */
-  border: none;
+  background-color: #4dc3ff; 
+  
   color: white;
   padding: 10px 12px;
   text-align: center;
@@ -37,6 +37,9 @@ p {
   display: inline-block;
   font-size: 16px;
   font-family: 'IBM Plex Mono', monospace;
+}
+#start-btn:active {
+    color: #0000e6;
 }
 
 
