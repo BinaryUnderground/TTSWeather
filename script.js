@@ -101,7 +101,7 @@ function drawWeather(d) {
         var moreDetails = "Stay home";
     } else if (id === 800) {
         var moreDetails = "Have a great day.";
-    }
+    } else var moreDetails = "";
     var to_speak = new SpeechSynthesisUtterance(fahrenheit + "degrees farenheit and " + condition + moreDetails);
     var iconcode = d.weather[0].icon;
     var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
