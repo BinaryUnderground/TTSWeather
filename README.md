@@ -6,8 +6,8 @@ This is a text to speech weather application built using HTML, CSS, & Javascript
 
 
 ## <i>Speech examples</i>
-#### Good examples:
-#### Bad examples: Boise Idaho, Denver Colorado
+#### Good examples(asking weather in this format WILL work!) - Say: "Boise" or "Idaho" or "Denver" or "Colorado"
+#### Bad examples(asking weather in this format will NOT work...) - Say: "Boise Idaho" or "Denver Colorado"
 
 ## <i>Built with</i>
 
