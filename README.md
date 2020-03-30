@@ -1,4 +1,5 @@
-HackBrooklyn Project
-Contributors: Tristan Wallace, Oljas Alishev, Mohammad Faiaz
-Weather For The Visually Impaired App
+# TTSWeather
 
+## Contributors 
+
+Tristan Wallace, Oljas Alishev, Mohammad Faiaz
