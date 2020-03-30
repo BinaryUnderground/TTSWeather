@@ -76,6 +76,27 @@ function weatherBalloon(cityName) {
         .catch(function () {
             // catch any errors
         });
+} 
+
+//get the users latitude and longitude location
+if ("geolocation" in navigator) {
+  // Do something with coordinates returned
+  function processCoords(position) {
+      let latitude = position.coords.latitude;
+      let longitude = position.coords.longitude;
+      let first_div = document.querySelector('div');
+      let el_h2 = document.createElement('h2');
+      latitude = Math.round(latitude * 100)/ 100;
+      longitude = Math.round(longitude * 100)/ 100;
+      // Set h2 text as coordinates
+      el_h2.innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
+
+      // Append h2 to document
+      first_div.appendChild(el_h2);
+  }
+
+  // Fetch Coordinates
+  navigator.geolocation.getCurrentPosition(processCoords);
 }
 
 window.onload = function () {
