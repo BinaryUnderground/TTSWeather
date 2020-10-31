@@ -2,7 +2,10 @@
 
 ## <i>About</i>
 
-This is a text to speech weather application built using HTML, CSS, & Javascript. Our team utilized the OpenWeathermap api to retrieve live weather data, Mozilla Web Speech API in order to transcribe text-to-speech/speech-to-text. 
+This is a text to speech weather application built using HTML, CSS, & Javascript. Our team utilized the OpenWeathermap api to retrieve live weather data, Mozilla Web Speech API in order to transcribe text-to-speech/speech-to-text. The app has won 1st position in a track in HackBrooklyn.
+
+## <i>Compatibily<i>
+  This app is most compatible with Google Chrome and Mozilla Firefox. It may encounter issues in Safari. Please use Chrome or Firefox on pc or mobile device for the best experience.
 
 
 ## <i>Speech examples</i>
@@ -21,7 +24,7 @@ Mozilla Web Speech API -
 
 ## <i>Authors</i>
 
-Tristan Wallace, Oljas Alishev, Mohammad Faiaz
+Tristan Wallace, Oljas Alishev, Mohammad Hossain
 
 ## <i>License</i>
 
